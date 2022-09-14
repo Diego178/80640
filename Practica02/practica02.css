@@ -1,0 +1,63 @@
+* {
+    margin: 3px;
+    /*padding: 30px;*/
+}
+
+#sp2 {
+    color: rgb(230, 225, 224)
+}
+
+#fondo {
+background-color: gainsboro;
+}
+
+body {
+    background-image: url("fondo.jpg");
+}
+
+p span {
+    color: blueviolet;
+    margin: 5px;
+    text-shadow: 2px;
+    width: auto;
+}
+
+.fuente {
+    width: 400px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: rgb(156, 183, 208);
+    border: 3px dotted salmon;
+    border-width: thick;
+}
+
+span.fuente::after {
+    content: '\A'; white-space: pre;
+}
+
+p {
+    width: 700px;
+    margin: auto;
+    border: 1px solid red;
+    color: rgb(201, 208, 210);
+    font-size: 16px;
+    padding: 10 px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    outline-color:rgb(12, 246, 210);
+    outline-width: 5px;
+    outline-style: solid;
+}
+h1{
+    color: rgb(239, 242, 244);
+    font-size: 32px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+span {
+    color: rgb(204, 246, 234);
+}
+#sp1 {
+    outline-color:yellow;
+    outline-width: 30px;
+    outline-style: initial;
+    color: rgb(221, 235, 242);
+}
