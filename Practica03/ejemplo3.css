@@ -1,0 +1,18 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.padre {
+    background-color: orange;
+    margin: 10px;
+    /*padding: 10px;*/
+    display: flex;
+    flex-direction: wrap;
+}
+
+.hijo{
+    background-color:  rgb(78, 151, 151);
+    width: 200px;
+    margin: 10px;
+}
