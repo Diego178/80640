@@ -1,0 +1,11 @@
+.padre {
+    border: 2px dashed blue;
+    height: 20vh;
+
+}
+
+*{
+    margin: 0%
+    box-sizing: content-box;
+    
+}
