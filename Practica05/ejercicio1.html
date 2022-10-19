@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>practica 05 ejercico 01</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="ejercicio5Ventana.css"> -->
+        <script>
+            
+            function cambiarColor(color) {
+                console.log("el color recibido es: ", color)
+                var elemento = document.getElementById("texto")
+                elemento.style.color = color
+            }      
+            
+            function cambiarColor2(color) {
+                console.log("el color recibido es: ", color)
+                var elemento = document.getElementById("texto2")
+                elemento.style.color = color
+            } 
+            function cambiarColor3(color) {
+                console.log("el color recibido es: ", color)
+                var elemento = document.getElementById("texto2")
+                elemento.style.color = color
+            } 
+            function cambiarColores(color){
+                let c = document.getElementsByTagName("p")
+                // for (let index = 0; index < c.length; index++) {
+                //     c[index].style.color = color
+                // }
+                // var arr = [].slice.call(c)
+                // arr.forEach(e => {
+                //     console.log(e)
+                // });
+                for (let x in c) {
+                    console.log(x)
+                    if(Object.hasOwnProperty.call(c,x)){
+                        c[x].style.color = "blue";
+                    }
+                }
+                //document.getElementById("demo").innerHTML=txt
+            }
+            // let car ="Fiat"
+            const car = {type:"Fiaf", model:"500", color:"white",
+            start:function(){
+                console.log("Prendido")
+            }};
+            //Propiedad
+            car.type="Camaro"
+            //funcion
+            // car.start()
+
+
+</script>
+    </head>
+    <body>
+        <!-- p#texto{simple texto}+(button[onclick=cambiarColor\(yellow\)])*2 -->
+        <p id="texto">simple texto</p>
+        <p id="texto2">simple texto</p>
+        <button onclick="cambiarColor('blue'); cambiarColor2('green')">azul</button>
+        <button onclick="cambiarColor('red'); cambiarColor3('purple')">rojo</button>
+        <button onclick="cambiarColores('pink')">colores</button>
+        <p id="demo"></p>
+    </body>
+</html>
