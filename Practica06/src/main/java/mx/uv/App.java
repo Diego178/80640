@@ -27,7 +27,8 @@ public class App
             res.status(200);
             JsonObject oRespuesta = new JsonObject();
             oRespuesta.addProperty("msj", "hola");
-
+            oRespuesta.addProperty("email", req.queryParams("email"));
+            return oRespuesta;
         });
     }
 }
