@@ -26,10 +26,13 @@ public class App
         port(80);
         before((req, res)-> res.type("application/json"));
         // get("/usuario", (req, res)-> gson.toJson(u1));
-        get("/usuario", (req, res)-> gson.toJson(usuarios));
+        //get("/usuario", (req, res)-> gson.toJson(usuarios));
+        get("/usuarios", (req, res)-> gson.toJson(usuarios));
 
-        post("/", (req, res)->{
+
+        post("/usuarios", (req, res)->{
             String datosFormulario = req.body();
+            System.out.println(datosFormulario);
             Usuario u = gson.fromJson(datosFormulario, Usuario.class);
             usuarios.put(u.getId(), u);
             return "usuarioAgregado";

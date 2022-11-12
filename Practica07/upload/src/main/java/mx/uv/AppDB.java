@@ -1,0 +1,40 @@
+package mx.uv;
+import static spark.Spark.*;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+
+import com.google.gson.Gson;
+
+/**
+ * Diego Arellano Moreno
+ *
+ */
+public class AppDB 
+    
+{
+    public static Gson gson = new Gson();
+    //base de datos en memoria
+    public static Map<String, Usuario> usuarios = new HashMap<>();
+    public static void main( String[] args )
+    {
+
+        port(80);
+
+        before((req, res)-> res.type("application/json"));
+
+        get("/usuarios", (req, res)-> gson.toJson(DAO.dameUsuarios() ));
+
+
+        post("/usuarios", (req, res)->{
+            String usuario_request = req.body();
+            logger.info(usuario_request);
+            Usuario u = gson.fromJson(usuario_request, Usuario.class);
+            String id = UUID.randomUUID().toString();
+            u.setId(id);
+            return "usuarioAgregado";
+        });
+
+    }
+}
